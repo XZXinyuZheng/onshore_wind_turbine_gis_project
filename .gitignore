@@ -1,0 +1,9 @@
+data/
+app/data/
+.env
+.Rproj.user/
+app/.Rproj.user/
+app/rsconnect/
+lightening_talk_and_proposal/
+renv.lock
+.Rprofile
