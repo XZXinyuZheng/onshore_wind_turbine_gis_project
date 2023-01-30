@@ -247,7 +247,7 @@ st_write(median_income_texas, 'data/processed/median_income_texas.geojson')
 # power grid --------------------------------------------------------------
 
 grid <- 
-  st_read('data/raw/Electric__Power_Transmission_Lines.geojson') %>% 
+  st_read('data/raw/shapefile/Electric__Power_Transmission_Lines.geojson') %>% 
   st_transform(
     st_crs(us)) %>% 
   st_filter(us) %>% 
@@ -273,7 +273,7 @@ grid %>%
 # land cover --------------------------------------------------------------
 
 land <- 
-  terra::rast('data/raw/nlcd_2019_land_cover/nlcd_2019_land_cover_l48_20210604.img')
+  terra::rast('data/raw/raster/nlcd_2019_land_cover/nlcd_2019_land_cover_l48_20210604.img')
 
 texas <- 
   tigris::states(year = 2020) %>% 
